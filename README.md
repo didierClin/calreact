@@ -1,24 +1,8 @@
-# README
+Create a calendar with events using react on rails 5 application
+from :
+https://learnetto.com/users/hrishio/courses/the-complete-react-on-rails-5-course
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+props : simple way to pass data to components,
+jsx,
+state: way for components to maintain internal sate data,
+only one single tag element in a render for a component,
