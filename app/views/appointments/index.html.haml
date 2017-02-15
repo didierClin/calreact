@@ -1,11 +1,4 @@
 %h1 React calendar
-%h3 Make a new Appointment
 %h2 Appointments
 
-= form_for @appointment, remote: true do |f|
-  = f.text_field :title
-  = f.text_field :apt_time
-  = f.submit 'Make a new appointment'
-
-#appointments
-  = render 'appointments'
+= react_component('Appointments', appointments: @appointments)
