@@ -2,7 +2,7 @@
 %h3 Make a new Appointment
 %h2 Appointments
 
-= form_for @appointment do |f|
+= form_for @appointment, remote: true do |f|
   = f.text_field :title
   = f.text_field :apt_time
   = f.submit 'Make a new appointment'
