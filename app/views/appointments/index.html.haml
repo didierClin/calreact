@@ -7,6 +7,5 @@
   = f.text_field :apt_time
   = f.submit 'Make a new appointment'
 
-- @appointments.each do |a|
-  %h3= a.title
-  %p= a.apt_time
+#appointments
+  = render 'appointments'
