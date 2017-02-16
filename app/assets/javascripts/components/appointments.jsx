@@ -18,7 +18,18 @@ var Appointments = React.createClass({
   handleFormSubmit: function() {
     var appointment = {title: this.state.title, apt_time: this.state.apt_time}
     $.post('/appointments',
-            {appointment: appointment});
+            {appointment: appointment})
+      .done(function(data) {
+              this.addNewAppointment(data);
+            }
+            .bind(this));
+  },
+
+  addNewAppointment: function(appointment) {
+    // add react addons (collection of utilities) in config file application
+    //
+    var appointments = React.addons.update(this.state.appointments, { $push: [appointment]});
+    this.setState({ appointments: appointments});
   },
 
   render: function() {
