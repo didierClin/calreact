@@ -5,8 +5,9 @@ var Appointments = React.createClass({
     return {
       // return an object
       appointments: this.props.appointments,
-      input_title: 'Daily standup meeting',
-      input_apt_time: 'Tomorrow at 9am'
+      // rename input entries as title and apt_time
+      title: 'Daily standup meeting',
+      apt_time: 'Tomorrow at 9am'
     }
   },
 
@@ -18,8 +19,9 @@ var Appointments = React.createClass({
     return (
       <div>
         {/* we now manage state */}
-        <AppointmentForm input_title={this.state.input_title}
-          input_apt_time={this.state.input_apt_time}
+        <AppointmentForm
+          input_title={this.state.title}
+          input_apt_time={this.state.apt_time}
           onUserInput={this.handleUserInput} />
         <AppointmentsList appointments={this.state.appointments} />
       </div>
