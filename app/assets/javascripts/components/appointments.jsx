@@ -11,7 +11,7 @@ var Appointments = React.createClass({
   },
 
   handleUserInput: function(obj) {
-    this.setStage(obj);
+    this.setState(obj);
   },
 
   render: function() {
