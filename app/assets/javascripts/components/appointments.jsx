@@ -15,6 +15,12 @@ var Appointments = React.createClass({
     this.setState(obj);
   },
 
+  handleFormSubmit: function() {
+    var appointment = {title: this.state.title, apt_time: this.state.apt_time}
+    $.post('/appointments',
+            {appointment: appointment});
+  },
+
   render: function() {
     return (
       <div>
@@ -22,7 +28,8 @@ var Appointments = React.createClass({
         <AppointmentForm
           input_title={this.state.title}
           input_apt_time={this.state.apt_time}
-          onUserInput={this.handleUserInput} />
+          onUserInput={this.handleUserInput}
+          onFormSubmit={this.handleFormSubmit} />
         <AppointmentsList appointments={this.state.appointments} />
       </div>
      )
