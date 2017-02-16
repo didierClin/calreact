@@ -29,7 +29,11 @@ var Appointments = React.createClass({
     // add react addons (collection of utilities) in config file application
     //
     var appointments = React.addons.update(this.state.appointments, { $push: [appointment]});
-    this.setState({ appointments: appointments});
+    this.setState({
+      appointments: appointments.sort(function(a,b){
+        return new Date(a.apt_time) - new Date(b.apt_time);
+      })
+    });
   },
 
   render: function() {
