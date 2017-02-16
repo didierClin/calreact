@@ -3,11 +3,9 @@ var Appointments = React.createClass({
     return (
       <div>
         {this.props.appointments.map(function(appointment) {
+          // don't forget to return
           return (
-            <div>
-              <h3> {appointment.title} </h3>
-              <p>  {appointment.apt_time} </p>
-            </div>
+            <Appointment appointment={appointment} />
           )
         })}
       </div>
